@@ -5,13 +5,6 @@ Version:	0.0.3.ogle2
 Release:	2
 License:	GPL
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 Source0:	http://www.dtek.chalmers.se/groups/dvd/%{name}-%{version}.tar.gz
 URL:		http://www.videolan.org/libdvdcss/
 BuildRequires:	autoconf
@@ -31,13 +24,6 @@ pЁyt DVD.
 Summary:	%{name} library headers
 Summary(pl):	Pliki nagЁСwkowe biblioteki %{name}
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -52,13 +38,6 @@ CSS w swoich programach.
 Summary:	libdevdread static libraries
 Summary(pl):	Statyczne biblioteki do obsЁugi formatu DVD-Video
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
