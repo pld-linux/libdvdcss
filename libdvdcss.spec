@@ -61,9 +61,10 @@ Statyczne biblioteki libdvdcss.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
-install src/*.h $RPM_BUILD_ROOT/%{_includedir}/dvdcss
+install src/*.h $RPM_BUILD_ROOT%{_includedir}/dvdcss
 
 %clean
 rm -rf $RPM_BUILD_ROOT
