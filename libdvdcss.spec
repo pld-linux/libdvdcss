@@ -1,11 +1,11 @@
 Summary:	Library to decrypt CSS-encoded DVD
 Summary(pl):	Biblioteka do odkodowania DVD-Video
 Name:		libdvdcss
-Version:	1.0.0
+Version:	1.1.0
 Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://www.videolan.org/pub/videolan/libdvdcss/1.0.0/%{name}-%{version}.tar.gz
+Source0:	http://www.videolan.org/pub/videolan/libdvdcss/1.1.0/%{name}-%{version}.tar.gz
 URL:		http://www.videolan.org/libdvdcss/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -52,11 +52,7 @@ Statyczne biblioteki libdvdcss.
 %build
 aclocal
 autoconf
-%configure \
-	--disable-sdl \
-	--disable-gtk \
-	--disable-x11 \
-	--disable-xvideo
+%configure 
 
 %{__make}
 
@@ -64,8 +60,8 @@ autoconf
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-
-gzip -9nf README AUTHORS TODO ChangeLog
+install src/*.h $RPM_BUILD_ROOT/%{_includedir}/dvdcss
+gzip -9nf README AUTHORS ChangeLog
 
 %post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
@@ -81,7 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
-%{_includedir}/videolan/*
+%{_includedir}/dvdcss
 
 %files static
 %defattr(644,root,root,755)
