@@ -5,7 +5,7 @@ Version:	1.1.0
 Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://www.videolan.org/pub/videolan/libdvdcss/1.1.0/%{name}-%{version}.tar.gz
+Source0:	http://www.videolan.org/pub/videolan/libdvdcss/%{version}/%{name}-%{version}.tar.gz
 URL:		http://www.videolan.org/libdvdcss/
 BuildRequires:	autoconf
 BuildRequires:	automake
