@@ -1,7 +1,7 @@
 Summary:	Library to decrypt CSS-encoded DVD
 Summary(pl):	Biblioteka do odkodowania DVD-Video
 Name:		libdvdcss
-Version:	1.1.0
+Version:	1.1.1
 Release:	1
 License:	GPL
 Group:		Libraries
