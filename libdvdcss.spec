@@ -17,8 +17,8 @@ BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-libdvdcss is a simple library designed for accessing DVDs like a block device
-without having to bother about the decryption.
+libdvdcss is a simple library designed for accessing DVDs like a block
+device without having to bother about the decryption.
 
 %description -l pl
 Biblioteka dostarczaj±ca prosty interfejs do dostêpu do kodowanych
@@ -37,7 +37,7 @@ Requires:	%{name} = %{version}
 This is the libraries, include files and other resources you can use
 to incorporate libdvdcss into applications.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe oraz dokumentacja pozwalaj±ca na dodawanie obs³ugi
 CSS w swoich programach.
 
@@ -53,11 +53,11 @@ Requires:	%{name}-devel = %{version}
 %description static
 This is package with static libdvdcss libraries.
 
-%description -l pl static
+%description static -l pl
 Statyczne biblioteki libdvdcss.
 
 %prep
-%setup  -q
+%setup -q
 
 %build
 aclocal
@@ -66,7 +66,7 @@ autoconf
 	--disable-sdl \
 	--disable-gtk \
 	--disable-x11 \
-	--disable-xvideo 
+	--disable-xvideo
 
 %{__make}
 
@@ -77,7 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 
 gzip -9nf README AUTHORS TODO ChangeLog
 
-%post   -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %clean
