@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://www.videolan.org/pub/videolan/libdvdcss/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	2d1cbdd26fb60f84edff708f8277159b
 URL:		http://www.videolan.org/libdvdcss/
 BuildRequires:	autoconf
 BuildRequires:	automake
