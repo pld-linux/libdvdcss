@@ -54,7 +54,7 @@ Statyczne biblioteki libdvdcss.
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
-%configure 
+%configure
 
 %{__make}
 
