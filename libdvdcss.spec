@@ -60,7 +60,9 @@ Statyczne biblioteki libdvdcss.
 %setup  -q
 
 %build
-%configure2_13 \
+aclocal
+autoconf
+%configure \
 	--disable-sdl \
 	--disable-gtk \
 	--disable-x11 \
