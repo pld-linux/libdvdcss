@@ -1,5 +1,5 @@
 Summary:	Library to decrypt CSS-encoded DVD
-Summary(pl):	Biblioteka do odkodowania DVD-Video
+Summary(pl):	Biblioteka do dekodowania DVD zakodowanych CSS
 Name:		libdvdcss
 Version:	1.1.1
 Release:	1
@@ -9,7 +9,6 @@ Source0:	http://www.videolan.org/pub/videolan/libdvdcss/%{version}/%{name}-%{ver
 URL:		http://www.videolan.org/libdvdcss/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -17,8 +16,8 @@ libdvdcss is a simple library designed for accessing DVDs like a block
 device without having to bother about the decryption.
 
 %description -l pl
-Biblioteka dostarczaj±ca prosty interfejs do dostêpu do kodowanych
-p³yt DVD.
+Biblioteka dostarczaj±ca prosty interfejs pozwalaj±cy na dostêp do
+zakodowanych p³yt DVD.
 
 %package devel
 Summary:	%{name} library headers
@@ -35,8 +34,8 @@ Pliki nag³ówkowe oraz dokumentacja pozwalaj±ca na dodawanie obs³ugi
 CSS w swoich programach.
 
 %package static
-Summary:	libdevdread static libraries
-Summary(pl):	Statyczne biblioteki do obs³ugi formatu DVD-Video
+Summary:	libdvdcss static libraries
+Summary(pl):	Statyczne biblioteki libdvdcss
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 
@@ -60,19 +59,21 @@ autoconf
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-install src/*.h $RPM_BUILD_ROOT/%{_includedir}/dvdcss
-gzip -9nf README AUTHORS ChangeLog
 
-%post	-p /sbin/ldconfig
-%postun -p /sbin/ldconfig
+install src/*.h $RPM_BUILD_ROOT/%{_includedir}/dvdcss
+
+gzip -9nf README AUTHORS ChangeLog
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post	-p /sbin/ldconfig
+%postun -p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
 %doc *.gz
-%attr(755,root,root) %{_libdir}/lib*.so.*
+%attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
