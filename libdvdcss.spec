@@ -50,7 +50,7 @@ Statyczne biblioteki libdvdcss.
 
 %build
 aclocal
-autoconf
+%{__autoconf}
 %configure 
 
 %{__make}
