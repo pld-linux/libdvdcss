@@ -49,7 +49,7 @@ Statyczne biblioteki libdvdcss.
 %setup -q
 
 %build
-libtoolize -c -f
+%{__libtoolize}
 aclocal
 %{__autoconf}
 %configure 
