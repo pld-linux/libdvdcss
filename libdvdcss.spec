@@ -9,6 +9,7 @@ Source0:	http://www.videolan.org/pub/videolan/libdvdcss/%{version}/%{name}-%{ver
 URL:		http://www.videolan.org/libdvdcss/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -50,7 +51,7 @@ Statyczne biblioteki libdvdcss.
 
 %build
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure 
 
