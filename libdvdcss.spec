@@ -1,3 +1,4 @@
+%bcond_without	static_libs	# don't build static library
 Summary:	Library to decrypt CSS-encoded DVD
 Summary(pl):	Biblioteka do dekodowania DVD zakodowanych CSS
 Name:		libdvdcss
@@ -54,7 +55,9 @@ Statyczne biblioteki libdvdcss.
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
-%configure
+%{__automake}
+%configure \
+	%{!?with_static_libs:--disable-static}
 
 %{__make}
 
@@ -83,6 +86,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/lib*.la
 %{_includedir}/dvdcss
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
+%endif
