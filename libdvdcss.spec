@@ -12,7 +12,7 @@ Group:		Libraries
 Source0:	http://www.videolan.org/pub/videolan/libdvdcss/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	bec67a57436a7f80c5aeb3c3abccbd9e
 URL:		http://www.videolan.org/libdvdcss/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -58,6 +58,7 @@ Statyczne biblioteki libdvdcss.
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure \
 	%{!?with_static_libs:--disable-static}
