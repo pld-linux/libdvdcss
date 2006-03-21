@@ -1,3 +1,4 @@
+#
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 #
@@ -25,10 +26,10 @@ Biblioteka dostarczaj±ca prosty interfejs pozwalaj±cy na dostêp do
 zakodowanych p³yt DVD.
 
 %package devel
-Summary:	%{name} library headers
-Summary(pl):	Pliki nag³ówkowe biblioteki %{name}
+Summary:	libdvdcss library headers
+Summary(pl):	Pliki nag³ówkowe biblioteki libdvdcss
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 This is the libraries, include files and other resources you can use
@@ -42,7 +43,7 @@ CSS w swoich programach.
 Summary:	libdvdcss static libraries
 Summary(pl):	Statyczne biblioteki libdvdcss
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 This is package with static libdvdcss libraries.
