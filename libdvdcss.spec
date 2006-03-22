@@ -15,6 +15,7 @@ URL:		http://www.videolan.org/libdvdcss/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
+BuildRequires:	tetex-makeindex
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
