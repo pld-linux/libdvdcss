@@ -3,7 +3,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Library to decrypt CSS-encoded DVD
-Summary(pl):	Biblioteka do dekodowania DVD zakodowanych CSS
+Summary(pl.UTF-8):   Biblioteka do dekodowania DVD zakodowanych CSS
 Name:		libdvdcss
 Version:	1.2.9
 Release:	1
@@ -22,13 +22,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 libdvdcss is a simple library designed for accessing DVDs like a block
 device without having to bother about the decryption.
 
-%description -l pl
-Biblioteka dostarczaj±ca prosty interfejs pozwalaj±cy na dostêp do
-zakodowanych p³yt DVD.
+%description -l pl.UTF-8
+Biblioteka dostarczajÄ…ca prosty interfejs pozwalajÄ…cy na dostÄ™p do
+zakodowanych pÅ‚yt DVD.
 
 %package devel
 Summary:	libdvdcss library headers
-Summary(pl):	Pliki nag³ówkowe biblioteki libdvdcss
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libdvdcss
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -36,20 +36,20 @@ Requires:	%{name} = %{version}-%{release}
 This is the libraries, include files and other resources you can use
 to incorporate libdvdcss into applications.
 
-%description devel -l pl
-Pliki nag³ówkowe oraz dokumentacja pozwalaj±ca na dodawanie obs³ugi
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe oraz dokumentacja pozwalajÄ…ca na dodawanie obsÅ‚ugi
 CSS w swoich programach.
 
 %package static
 Summary:	libdvdcss static libraries
-Summary(pl):	Statyczne biblioteki libdvdcss
+Summary(pl.UTF-8):   Statyczne biblioteki libdvdcss
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 This is package with static libdvdcss libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczne biblioteki libdvdcss.
 
 %prep
