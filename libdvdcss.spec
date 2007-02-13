@@ -3,7 +3,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Library to decrypt CSS-encoded DVD
-Summary(pl.UTF-8):   Biblioteka do dekodowania DVD zakodowanych CSS
+Summary(pl.UTF-8):	Biblioteka do dekodowania DVD zakodowanych CSS
 Name:		libdvdcss
 Version:	1.2.9
 Release:	1
@@ -28,7 +28,7 @@ zakodowanych płyt DVD.
 
 %package devel
 Summary:	libdvdcss library headers
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libdvdcss
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libdvdcss
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -42,7 +42,7 @@ CSS w swoich programach.
 
 %package static
 Summary:	libdvdcss static libraries
-Summary(pl.UTF-8):   Statyczne biblioteki libdvdcss
+Summary(pl.UTF-8):	Statyczne biblioteki libdvdcss
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
