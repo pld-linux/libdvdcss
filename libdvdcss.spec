@@ -6,11 +6,12 @@ Summary:	Library to decrypt CSS-encoded DVD
 Summary(pl.UTF-8):	Biblioteka do dekodowania DVD zakodowanych CSS
 Name:		libdvdcss
 Version:	1.2.9
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries
 Source0:	http://www.videolan.org/pub/videolan/libdvdcss/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	bec67a57436a7f80c5aeb3c3abccbd9e
+Patch0:		%{name}-doc.patch
 URL:		http://www.videolan.org/libdvdcss/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -54,6 +55,7 @@ Statyczne biblioteki libdvdcss.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -83,16 +85,17 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README AUTHORS ChangeLog
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libdvdcss.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libdvdcss.so.2
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libdvdcss.so
+%{_libdir}/libdvdcss.la
 %{_includedir}/dvdcss
 
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libdvdcss.a
 %endif
