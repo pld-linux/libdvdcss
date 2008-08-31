@@ -1,17 +1,3 @@
-diff -urN libdvdcss-1.2.9/doc/doxygen.cfg libdvdcss-1.2.9.new/doc/doxygen.cfg
---- libdvdcss-1.2.9/doc/doxygen.cfg	2004-02-24 14:59:00.000000000 +0100
-+++ libdvdcss-1.2.9.new/doc/doxygen.cfg	2008-08-18 14:03:07.000000000 +0200
-@@ -364,6 +364,10 @@
- INPUT                  = ../src/dvdcss/dvdcss.h \
-                          ../src/libdvdcss.c
- 
-+# The INPUT_ENCODING tag sets the character encoding of the input files.
-+
-+INPUT_ENCODING         = ISO-8859-1
-+
- # If the value of the INPUT tag contains directories, you can use the 
- # FILE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp 
- # and *.h) to filter out the source-files in the directories. If left 
 diff -urN libdvdcss-1.2.9/doc/header.html libdvdcss-1.2.9.new/doc/header.html
 --- libdvdcss-1.2.9/doc/header.html	2004-02-24 16:46:49.000000000 +0100
 +++ libdvdcss-1.2.9.new/doc/header.html	2008-08-18 14:03:27.000000000 +0200
