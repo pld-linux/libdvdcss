@@ -19,6 +19,7 @@ BuildRequires:	automake
 BuildRequires:	libtool
 %if %{with apidocs}
 BuildRequires:	doxygen
+BuildRequires:	texlive-fonts-cmsuper
 BuildRequires:	texlive-fonts-jknappen
 BuildRequires:	texlive-latex
 BuildRequires:	texlive-makeindex
