@@ -1,6 +1,7 @@
 #
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
+%bcond_without	apidocs		# documentation generated with doxygen
 #
 Summary:	Library to decrypt CSS-encoded DVD
 Summary(pl.UTF-8):	Biblioteka do dekodowania DVD zakodowanych CSS
@@ -16,7 +17,12 @@ URL:		http://www.videolan.org/libdvdcss/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
-BuildRequires:	tetex-makeindex
+%if %{with apidocs}
+BuildRequires:	doxygen
+BuildRequires:	texlive-fonts-jknappen
+BuildRequires:	texlive-latex
+BuildRequires:	texlive-makeindex
+%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -53,6 +59,17 @@ This is package with static libdvdcss libraries.
 %description static -l pl.UTF-8
 Statyczne biblioteki libdvdcss.
 
+%package apidocs
+Summary:	libdvdcss API documentation
+Summary(pl.UTF-8):	Dokumentacja API biblioteki libdvdcss
+Group:		Documentation
+
+%description apidocs
+libdvdcss API documentation.
+
+%description apidocs -l pl.UTF-8
+Dokumentacja API biblioteki libdvdcss.
+
 %prep
 %setup -q
 %patch0 -p1
@@ -64,6 +81,7 @@ Statyczne biblioteki libdvdcss.
 %{__autoheader}
 %{__automake}
 %configure \
+	%{!?with_apidocs:--disable-doc} \
 	%{!?with_static_libs:--disable-static}
 
 %{__make}
@@ -99,4 +117,10 @@ rm -rf $RPM_BUILD_ROOT
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libdvdcss.a
+%endif
+
+%if %{with apidocs}
+%files apidocs
+%defattr(644,root,root,755)
+%doc doc/html/*
 %endif
