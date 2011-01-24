@@ -22,6 +22,8 @@ BuildRequires:	doxygen
 BuildRequires:	texlive-fonts-cmsuper
 BuildRequires:	texlive-fonts-jknappen
 BuildRequires:	texlive-latex
+BuildRequires:	texlive-latex-extend
+BuildRequires:	texlive-latex-psnfss
 BuildRequires:	texlive-makeindex
 %endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
