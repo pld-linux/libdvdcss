@@ -13,7 +13,7 @@ Group:		Libraries
 Source0:	http://download.videolan.org/pub/videolan/libdvdcss/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	2218a193900e3203aa10dc24cdf54275
 Patch0:		%{name}-doc.patch
-URL:		http://www.videolan.org/libdvdcss/
+URL:		http://www.videolan.org/developers/libdvdcss.html
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
