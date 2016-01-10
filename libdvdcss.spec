@@ -2,12 +2,12 @@
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 %bcond_without	apidocs		# documentation generated with doxygen
-#
+
 Summary:	Library to decrypt CSS-encoded DVD
 Summary(pl.UTF-8):	Biblioteka do dekodowania DVD zakodowanych CSS
 Name:		libdvdcss
 Version:	1.3.0
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://download.videolan.org/pub/videolan/libdvdcss/1.3.0/%{name}-%{version}.tar.bz2
@@ -66,6 +66,9 @@ Statyczne biblioteki libdvdcss.
 Summary:	libdvdcss API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki libdvdcss
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 libdvdcss API documentation.
