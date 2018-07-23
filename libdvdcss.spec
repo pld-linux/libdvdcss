@@ -6,13 +6,13 @@
 Summary:	Library to decrypt CSS-encoded DVD
 Summary(pl.UTF-8):	Biblioteka do dekodowania DVD zakodowanych CSS
 Name:		libdvdcss
-Version:	1.4.0
+Version:	1.4.2
 Release:	1
 License:	GPL v2+
 Group:		Libraries
-Source0:	http://download.videolan.org/pub/videolan/libdvdcss/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	2edba36e6af3f0223c4f0454cdf3d159
-URL:		http://www.videolan.org/developers/libdvdcss.html
+Source0:	https://download.videolan.org/pub/videolan/libdvdcss/%{version}/%{name}-%{version}.tar.bz2
+# Source0-md5:	7b74f2e142b13c9de6dc8d807ab912d4
+URL:		https://www.videolan.org/developers/libdvdcss.html
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
