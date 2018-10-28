@@ -15,7 +15,7 @@ Source0:	https://download.videolan.org/pub/videolan/libdvdcss/%{version}/%{name}
 URL:		https://www.videolan.org/developers/libdvdcss.html
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:2
 %if %{with apidocs}
 BuildRequires:	doxygen
 BuildRequires:	texlive-fonts-cmsuper
@@ -80,7 +80,7 @@ Dokumentacja API biblioteki libdvdcss.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
