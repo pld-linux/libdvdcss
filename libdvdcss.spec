@@ -65,9 +65,7 @@ Statyczne biblioteki libdvdcss.
 Summary:	libdvdcss API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki libdvdcss
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 libdvdcss API documentation.
